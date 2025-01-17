@@ -12,8 +12,9 @@
                     <th scope="col">Address</th>
                     <th scope="col">city</th>
                     <th scope="col">zipcode</th>
+                    
+                    <th scope="col">created</th>
                     <th scope="col">id</th>
-                    <th scope="col">created_At</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,21 +39,22 @@
         {% else %}
         <div class="col-md-6 offset-md-3">
             <center>
-                <h1>Login</h1>
+                <h1>LOGIN FORM</h1>
             </center>
             <br>
 
             <form method="POST" action="{% url 'home' %}">
                 {% csrf_token %}
                 <div class="mb-3">
-                    <input type="text" class="form-control" name="user_name" placeholder="Username" required>
+                    <input type="text" class="form-control" name="user_name" placeholder="User Name" required>
                 </div>
                 <br>
                 <div class="mb-3">
                     <input type="password" class="form-control" name="password" placeholder="Password" required>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-secondary">Login</button>
+                <button type="submit" class="btn btn-secondary">LOGIN</button>
+
 
             </form>
         </div>
